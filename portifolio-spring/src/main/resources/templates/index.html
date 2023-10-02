@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Portifolio</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+
+    <h1>LEONARDO FREITAS DE MELO</h1>
+
+   <p><a th:href="@{/pagina-existente}"></a></p>
+
+    <div class="inicio-meio">
+
+    <div class="inicio">
+
+        <div class="imagem">
+            <img th:src="@{${imagemPath}}" alt="Minha Imagem">
+        </div>
+
+        <div class="textos">
+          <p th:text="${email}"></p>
+          <p th:text="${telefone}">Texto</p>
+          <p th:text="${dataNascimento}">Texto</p>
+          <a href="https://www.linkedin.com/in/leonardo-freitas-de-melo-90065a1b7/" target="blank"><p th:text="${linkedin}">LinkedIn</p></a>
+          <a href="https://github.com/LeoFreitasM" target="blank"><p th:text="${github}">GitHub</p></a>
+        </div>
+
+    </div>
+
+    <div class="experiencia">
+
+        <h2 th:text="${tituloExperiencias}" class="titulo"></h2>
+        <h4 th:text="${subTituloExperiencias}"></h4>
+        <h5 th:text="${periodoExperiencia}"></h5>
+        <p th:text="${dataExperiencia}"></p>
+
+    </div>
+
+    </div>
+
+    <div class="cursos">
+
+        <h2 th:text="${tituloFormacao}" class="titulo"></h2>
+
+        <div class="ultimo">
+
+        <div class="card">
+        <h4 th:text="${tituloCurso}"></h4>
+        <p th:text="${dataCurso}"></p>
+        <p th:text="${localCurso}"></p>
+        </div>
+
+        <div class="card">
+        <h4 th:text="${tituloCursoAlgoritmos}" class="titulo"></h4>
+        <p th:text="${dataCursoAlgoritmos}"></p>
+        <p th:text="${localCursoAlgoritmos}"></p>
+        </div>
+
+        <div class="card">
+        <h4 th:text="${tituloCursoMysql}" class="titulo"></h4>
+        <p th:text="${dataCursoMysql}"></p>
+        <p th:text="${localCursoMysql}"></p>
+        </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
